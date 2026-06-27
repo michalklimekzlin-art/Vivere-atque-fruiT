@@ -483,3 +483,98 @@ console.log(
 "color:white;font-size:16px;"
 
 );
+
+/* =======================================
+   Secret AI Mood
+======================================= */
+
+const secretMood=[
+
+"☕ Přemýšlím...",
+
+"🤔 To je zajímavý nápad.",
+
+"📁 Organizuji své myšlenky.",
+
+"🍺 Někdo navrhl pivo...",
+
+"❌ Zamítám pivo.",
+
+"☕ Espresso schváleno.",
+
+"😌 Pokračujme v práci."
+
+];
+
+function secretMessage(){
+
+const msg=
+
+secretMood[
+
+Math.floor(
+
+Math.random()*secretMood.length
+
+)
+
+];
+
+console.log(msg);
+
+}
+
+setInterval(secretMessage,8000);
+
+let konami=[];
+
+document.addEventListener("keydown",(e)=>{
+
+konami.push(e.key);
+
+if(konami.length>8)konami.shift();
+
+if(konami.join("")==="espresso"){
+
+document.body.style.transition="1s";
+
+document.body.style.filter="sepia(1) saturate(1.6)";
+
+setTimeout(()=>{
+
+alert(
+
+"☕ VaFT\n\nEspresso mód aktivován.\n\nVýkon +25 % 😄"
+
+);
+
+},600);
+
+}
+
+});
+
+console.log(
+"%cVAROVÁNÍ",
+"font-size:40px;color:red;font-weight:bold;"
+);
+
+console.log(
+"%cPokud jsi Pepa...",
+"font-size:22px;color:white;"
+);
+
+console.log(
+"%c...tak vítej 😄",
+"font-size:20px;color:#ffd86d;"
+);
+
+console.log(
+"%cAle na pivo dnes nejdeme.",
+"font-size:18px;color:#cccccc;"
+);
+
+console.log(
+"%c☕ Espresso už se připravuje...",
+"font-size:18px;color:#ffd86d;"
+);
